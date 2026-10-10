@@ -1,0 +1,21 @@
+# Arbor for Law + Audrey — Render deploy.
+# GitHub -> Render auto-deploy on main. Paid instance recommended for the
+# demo-request store (ephemeral disk resets on free-tier restarts).
+services:
+  - type: web
+    name: audrey-v1
+    runtime: node
+    plan: starter
+    autoDeploy: true
+    branch: main
+    buildCommand: npm install --omit=dev
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: NODE_ENV
+        value: production
+      # ANALYTICS_TOKEN: set in the Render dashboard (never commit secrets).
+      # LLM_PROVIDER / LLM_API_KEY: set in the Render dashboard when live
+      # counsel is wanted; unset = honest demo mode.

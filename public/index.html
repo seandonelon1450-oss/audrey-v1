@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FAF8F4">
+<meta name="description" content="Audrey — your week, handled. A morning brief of finished work, drafts to approve, and counsel when you need it.">
+<title>Audrey™ — Your Week, Handled</title>
+<link rel="stylesheet" href="/styles.css">
+<link rel="icon" type="image/png" href="/icons/icon-192.png">
+<link rel="apple-touch-icon" href="/icons/icon-180.png">
+<link rel="manifest" href="/manifest.webmanifest">
+</head>
+<body class="app-page">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand-lockup" href="/" aria-label="Audrey home">
+      <svg class="arch-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M5 28 A11 11 0 0 1 27 28" stroke-width="2.4"/><path d="M10.5 28 A5.5 5.5 0 0 1 21.5 28" stroke-width="2.4"/><path d="M14 28 A2 2 0 0 1 18 28" stroke-width="2.4"/></svg>
+      <span class="brand-name">Audrey<sup style="font-size:11px">™</sup></span>
+    </a>
+    <nav class="header-nav" aria-label="Primary">
+      <a class="nav-link" href="/for-attorneys">For Attorneys</a>
+      <a class="nav-link" href="/about">About</a>
+      <a class="powered-badge header-badge" href="#" title="Arbor Technologies site — coming soon" aria-label="Powered by Arbor (Arbor Technologies site coming soon)">
+        <svg class="arch-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M5 28 A11 11 0 0 1 27 28" stroke-width="2.4"/><path d="M10.5 28 A5.5 5.5 0 0 1 21.5 28" stroke-width="2.4"/><path d="M14 28 A2 2 0 0 1 18 28" stroke-width="2.4"/></svg>
+        <span class="pb-by">powered by</span><span class="pb-arbor">Arbor</span>
+      </a>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark theme">◐</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="app-wrap">
+
+  <!-- ============ BRIEFING (main screen: finished work, never a blank prompt) ============ -->
+  <section id="screen-briefing" class="screen active" aria-label="Morning brief">
+    <p class="eyebrow" id="briefDate">—</p>
+    <h1 class="h1"><span id="greeting">Good morning.</span><br>3 things are ready.</h1>
+
+    <article class="card mb-24 reveal" data-draft="1">
+      <span class="demo-flag">Demo</span>
+      <p class="card-label">Draft · ready to send</p>
+      <p class="body-lg">Reply to Meridian board thread — confirms the 10:00 call and attaches the Q4 allocation summary.</p>
+      <div class="draft-actions">
+        <button class="btn btn-audrey" data-act="approve">Approve</button>
+        <button class="btn btn-ghost" data-act="edit">Edit</button>
+        <button class="btn btn-ghost" data-act="skip">Skip</button>
+      </div>
+    </article>
+
+    <article class="card mb-24 reveal" data-draft="2">
+      <span class="demo-flag">Demo</span>
+      <p class="card-label">Draft · ready to send</p>
+      <p class="body-lg">Note to C. — moves lunch to 13:30 Thursday and asks about the Lisbon property decision by Friday.</p>
+      <div class="draft-actions">
+        <button class="btn btn-audrey" data-act="approve">Approve</button>
+        <button class="btn btn-ghost" data-act="edit">Edit</button>
+        <button class="btn btn-ghost" data-act="skip">Skip</button>
+      </div>
+    </article>
+
+    <article class="card mb-24 reveal" data-draft="3">
+      <span class="demo-flag">Demo</span>
+      <p class="card-label">Draft · ready to send</p>
+      <p class="body-lg">Car service confirmation — Thursday 8:40a flight change is in, pickup moved to 6:15a.</p>
+      <div class="draft-actions">
+        <button class="btn btn-audrey" data-act="approve">Approve</button>
+        <button class="btn btn-ghost" data-act="edit">Edit</button>
+        <button class="btn btn-ghost" data-act="skip">Skip</button>
+      </div>
+    </article>
+
+    <p class="hint center">Everything above is fictional demo data — Audrey has no calendar, email, or messaging access. Nothing sends without your tap.</p>
+    <p class="center mt-16"><button id="askAudreyBtn" class="btn btn-secondary">Ask Audrey</button></p>
+  </section>
+
+  <!-- ============ ASK AUDREY (secondary) ============ -->
+  <section id="screen-counsel" class="screen" aria-label="Ask Audrey">
+    <p class="eyebrow">Counsel</p>
+    <h2 class="h2">Ask Audrey</h2>
+    <p class="body-lg">Scheduling, drafting, decisions, preparation — ask plainly. She advises; <strong>you</strong> decide.</p>
+    <div class="honesty">
+      <strong>How Audrey gets there.</strong>
+      Every answer shows its reasoning: the two or three factors she weighed, in plain words. No black box — you see the thinking, then you decide.
+    </div>
+    <div id="modeBadge" class="badge" role="status">…</div>
+    <label class="field-label" for="counselInput">Your question</label>
+    <textarea id="counselInput" rows="4" placeholder="What needs her attention?"></textarea>
+    <div class="row mt-16">
+      <button id="counselBtn" class="btn btn-audrey btn-block">Ask</button>
+    </div>
+    <p id="counselStatus" class="hint" role="status"></p>
+    <div id="counselResult"></div>
+  </section>
+
+  <!-- ============ CIRCLE ============ -->
+  <section id="screen-circle" class="screen" aria-label="Circle">
+    <p class="eyebrow">Circle</p>
+    <h2 class="h2">Private notes</h2>
+    <div class="honesty">
+      <strong>Yours alone.</strong>
+      These notes live <strong>only in this browser on this device</strong>. The server never sees them,
+      nothing is backed up, and deleting is final. This is a personal log — not a synced account.
+    </div>
+    <label class="field-label" for="noteTitle">Title</label>
+    <input id="noteTitle" type="text" autocomplete="off" placeholder="e.g. Lisbon property">
+    <label class="field-label" for="noteBody">Note</label>
+    <textarea id="noteBody" rows="4" placeholder="Capture it before it slips away…"></textarea>
+    <div class="mt-16">
+      <button id="saveNoteBtn" class="btn btn-audrey btn-block">Save note</button>
+    </div>
+    <div id="noteList" class="nlist"></div>
+    <div class="draft-actions">
+      <button id="exportNotesBtn" class="btn btn-ghost">Export notes</button>
+      <button id="clearNotesBtn" class="btn btn-danger-ghost">Delete all</button>
+    </div>
+  </section>
+
+  <!-- ============ WAITLIST ============ -->
+  <section id="screen-waitlist" class="screen" aria-label="Waitlist">
+    <p class="eyebrow">Private beta</p>
+    <h2 class="h2">Be first in</h2>
+    <p class="body-lg">A private beta is opening for a small group of women. Leave your email and you'll be among the first invited.</p>
+    <label class="field-label" for="waitEmail">Email</label>
+    <input id="waitEmail" type="email" autocomplete="email" placeholder="you@example.com">
+    <div class="mt-16">
+      <button id="waitJoinBtn" class="btn btn-audrey btn-block">Notify me</button>
+    </div>
+    <p id="waitStatus" class="hint" role="status"></p>
+    <div class="honesty mt-24">
+      <strong>What happens to your email.</strong>
+      It's stored only so we can invite you to the beta. No marketing blasts, no sharing, no list-selling — ever. One invitation email, then silence unless you reply.
+    </div>
+  </section>
+
+  <!-- ============ TRUST ============ -->
+  <section id="screen-trust" class="screen" aria-label="Trust">
+    <p class="eyebrow">Trust</p>
+    <h2 class="h2">Trust, plainly</h2>
+    <ul class="plain">
+      <li><strong>Demo vs. real, labeled.</strong> Without an AI key, counsel answers come from built-in templates — clearly badged as demo. With a key set on the server, a real model answers instead, and the badge says so.</li>
+      <li><strong>What you ask is not stored.</strong> Counsel questions exist only for the request, then they're gone. The server keeps no logs of what you asked and no database of your words. We do not train on your data.</li>
+      <li><strong>Your Circle notes never leave this device.</strong> They live in this browser's local storage. We cannot see them, back them up, or recover them. Delete means delete.</li>
+      <li><strong>No integrations.</strong> Audrey cannot see your calendar, email, or contacts, and cannot send anything on your behalf. The briefing screen is a design concept with fictional demo data, every item labeled Demo.</li>
+      <li><strong>She advises; you decide.</strong> Audrey is counsel, not command. Nothing she says is financial, legal, or medical advice.</li>
+    </ul>
+    <p class="mt-24"><a class="btn btn-secondary btn-block" href="/data">Your data — export &amp; delete</a></p>
+    <p class="mt-16"><a class="btn btn-secondary btn-block" href="/faq">Does Audrey use AI?</a></p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h4>Arbor</h4>
+      <p class="small" style="color:#B8B0A5">Audrey is built and run by Arbor Technologies — work that gets done for you, by people and technology you can trust.</p>
+      <p><a class="powered-badge" href="#" title="Arbor Technologies site — coming soon" aria-label="Powered by Arbor (Arbor Technologies site coming soon)">
+        <svg class="arch-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M5 28 A11 11 0 0 1 27 28" stroke-width="2.4"/><path d="M10.5 28 A5.5 5.5 0 0 1 21.5 28" stroke-width="2.4"/><path d="M14 28 A2 2 0 0 1 18 28" stroke-width="2.4"/></svg>
+        <span class="pb-by">powered by</span><span class="pb-arbor">Arbor</span>
+      </a></p>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <ul>
+        <li><a href="/">Audrey</a></li>
+        <li><a href="/for-attorneys">Arbor for Law</a></li>
+        <li><a href="/about">About Audrey</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Trust</h4>
+      <ul>
+        <li><a href="/data">Your data</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/contact">Talk to a person</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="/data#charter">Data charter</a></li>
+        <li><a href="/for-attorneys#disclosure">Attorney disclosure</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-legal">
+    <div class="container footer-line">
+      <span>Powered by Arbor · The Arbor Group · She owns her data.</span>
+      <span>© 2026 The Arbor Group. Audrey™. Software powered by Arbor.</span>
+    </div>
+  </div>
+</footer>
+
+<nav class="tabbar" aria-label="Sections">
+  <button type="button" data-screen="screen-briefing" class="tab active">Briefing</button>
+  <button type="button" data-screen="screen-counsel" class="tab">Ask Audrey</button>
+  <button type="button" data-screen="screen-circle" class="tab">Circle</button>
+  <button type="button" data-screen="screen-waitlist" class="tab">Waitlist</button>
+  <button type="button" data-screen="screen-trust" class="tab">Trust</button>
+</nav>
+
+<script src="/js/site.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/analytics.js"></script>
+</body>
+</html>

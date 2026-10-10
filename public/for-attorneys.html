@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FAF8F4">
+<meta name="description" content="Arbor for Law: flat-fee successions without the paperwork. Charter seat $199/mo, 5 seats. Built by Arbor Technologies.">
+<title>Arbor for Law — Flat-Fee Successions Without the Paperwork</title>
+<link rel="stylesheet" href="/styles.css">
+<link rel="icon" type="image/png" href="/icons/icon-192.png">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand-lockup" href="/" aria-label="Audrey home">
+      <svg class="arch-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M5 28 A11 11 0 0 1 27 28" stroke-width="2.4"/><path d="M10.5 28 A5.5 5.5 0 0 1 21.5 28" stroke-width="2.4"/><path d="M14 28 A2 2 0 0 1 18 28" stroke-width="2.4"/></svg>
+      <span><span class="brand-name">Arbor for Law</span><br><span class="brand-sub">by Arbor Technologies</span></span>
+    </a>
+    <nav class="header-nav" aria-label="Primary">
+      <a class="nav-link" href="/">Audrey</a>
+      <a class="nav-link" href="/about">About</a>
+      <a class="nav-link" href="/data">Your Data</a>
+      <a class="powered-badge header-badge" href="#" title="Arbor Technologies site — coming soon" aria-label="Powered by Arbor (Arbor Technologies site coming soon)">
+        <svg class="arch-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M5 28 A11 11 0 0 1 27 28" stroke-width="2.4"/><path d="M10.5 28 A5.5 5.5 0 0 1 21.5 28" stroke-width="2.4"/><path d="M14 28 A2 2 0 0 1 18 28" stroke-width="2.4"/></svg>
+        <span class="pb-by">powered by</span><span class="pb-arbor">Arbor</span>
+      </a>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark theme">◐</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="container reading">
+      <p class="eyebrow reveal">Arbor for Law</p>
+      <h1 class="reveal">Flat-fee successions without the paperwork.</h1>
+      <p class="body-lg reveal" style="color:var(--muted)">Arbor for Law: flat-fee successions without the paperwork. Charter seat $199/mo, 5 seats.</p>
+      <p class="reveal"><a class="btn btn-primary" href="#demo">Book a demo</a></p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="three-col">
+        <article class="card card-lift reveal">
+          <p class="card-label">Drafts, ready</p>
+          <h3>Succession documents, drafted for you</h3>
+          <p style="color:var(--ink-2)">Petitions, affidavits, and filings assembled from your intake — every draft labeled <em>review before filing</em>. You sign off; nothing files itself.</p>
+        </article>
+        <article class="card card-lift reveal">
+          <p class="card-label">Flat fee, plain</p>
+          <h3>One seat, one price</h3>
+          <p style="color:var(--ink-2)">Charter seat <span class="price">$199/mo</span> — 5 seats. No per-document charges, no surprise line items. Built for small firms that run lean.</p>
+        </article>
+        <article class="card card-lift reveal">
+          <p class="card-label">Your data, yours</p>
+          <h3>Private by design</h3>
+          <p style="color:var(--ink-2)">Client matters stay yours. Export any time, delete any time. The 10-point data charter applies to every firm seat. <a href="/data">Read it.</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0" id="demo">
+    <div class="container reading">
+      <p class="eyebrow reveal">Book a demo</p>
+      <h2 class="reveal">See your next succession, drafted.</h2>
+      <p class="body-lg reveal" style="color:var(--muted)">Tell us where to reach you. A real person from Arbor Technologies will follow up — no automated drip, no list.</p>
+
+      <form id="demoForm" class="card reveal mt-24" novalidate>
+        <span class="demo-flag">Demo requests open</span>
+        <label class="field-label" for="demoName">Your name</label>
+        <input id="demoName" name="name" type="text" autocomplete="name" required>
+        <label class="field-label" for="demoFirm">Firm</label>
+        <input id="demoFirm" name="firm" type="text" autocomplete="organization" required>
+        <label class="field-label" for="demoEmail">Email</label>
+        <input id="demoEmail" name="email" type="email" autocomplete="email" required>
+        <label class="field-label" for="demoPhone">Phone (optional)</label>
+        <input id="demoPhone" name="phone" type="tel" autocomplete="tel">
+        <label class="field-label" for="demoMsg">What should we show you? (optional)</label>
+        <textarea id="demoMsg" name="message" rows="3" placeholder="e.g. small succession affidavits, intake flow"></textarea>
+        <p class="mt-16"><button class="btn btn-primary btn-block" type="submit" id="demoSubmit">Book a demo</button></p>
+        <p id="demoStatus" class="hint" role="status" aria-live="polite"></p>
+        <p class="small" style="color:var(--field)">Your request is stored only so we can follow up on the demo. You'll get a reference code to export or delete it any time from <a href="/data">Your data</a>.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0" id="disclosure">
+    <div class="container reading">
+      <div class="honesty reveal">
+        <strong>Attorney advertising notice.</strong>
+        Thomas G. Donelon, Metairie, Louisiana. This page is general information, not legal advice, and contacting us does not create an attorney–client relationship.
+        <br><br>
+        <strong>Software disclosure.</strong>
+        Software powered by Arbor. Arbor Technologies is a software company, not a law firm. It does not provide legal services, does not represent clients, and does not share in legal fees. The Arbor Group is a holding brand, not a law firm.
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h4>Arbor for Law</h4>
+      <p class="small" style="color:#B8B0A5">Succession document software for small firms — built and run by Arbor Technologies.</p>
+      <p><a class="powered-badge" href="#" title="Arbor Technologies site — coming soon" aria-label="Powered by Arbor (Arbor Technologies site coming soon)">
+        <svg class="arch-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M5 28 A11 11 0 0 1 27 28" stroke-width="2.4"/><path d="M10.5 28 A5.5 5.5 0 0 1 21.5 28" stroke-width="2.4"/><path d="M14 28 A2 2 0 0 1 18 28" stroke-width="2.4"/></svg>
+        <span class="pb-by">powered by</span><span class="pb-arbor">Arbor</span>
+      </a></p>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <ul>
+        <li><a href="/">Audrey</a></li>
+        <li><a href="/for-attorneys">Arbor for Law</a></li>
+        <li><a href="/about">About Audrey</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Trust</h4>
+      <ul>
+        <li><a href="/data">Your data</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/contact">Talk to a person</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="/data#charter">Data charter</a></li>
+        <li><a href="#disclosure">Attorney disclosure</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-legal">
+    <div class="container footer-line">
+      <span>Powered by Arbor · The Arbor Group · She owns her data.</span>
+      <span>© 2026 The Arbor Group. Arbor for Law™.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/site.js"></script>
+<script src="/js/analytics.js"></script>
+<script>
+'use strict';
+(function () {
+  var form = document.getElementById('demoForm');
+  var status = document.getElementById('demoStatus');
+  var btn = document.getElementById('demoSubmit');
+  form.addEventListener('submit', async function (ev) {
+    ev.preventDefault();
+    status.className = 'hint';
+    var payload = {
+      name: document.getElementById('demoName').value.trim(),
+      firm: document.getElementById('demoFirm').value.trim(),
+      email: document.getElementById('demoEmail').value.trim(),
+      phone: document.getElementById('demoPhone').value.trim(),
+      message: document.getElementById('demoMsg').value.trim()
+    };
+    if (!payload.name || !payload.firm || !payload.email) {
+      status.textContent = 'Please add your name, firm, and email.';
+      status.classList.add('status-err');
+      return;
+    }
+    btn.disabled = true;
+    status.textContent = 'Sending…';
+    try {
+      var res = await fetch('/api/demo-request', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      var data = await res.json();
+      if (data.ok) {
+        if (window.trackEvent) window.trackEvent('demo_request');
+        status.textContent = 'Request received. Your reference code is ' + data.ref + ' — keep it to export or delete your request from Your data.';
+        status.classList.add('status-ok');
+        form.querySelectorAll('input, textarea').forEach(function (el) { el.value = ''; });
+      } else {
+        status.textContent = data.error || 'Something went wrong — try again.';
+        status.classList.add('status-err');
+      }
+    } catch (e) {
+      status.textContent = 'Could not reach the server — try again.';
+      status.classList.add('status-err');
+    }
+    btn.disabled = false;
+  });
+})();
+</script>
+</body>
+</html>

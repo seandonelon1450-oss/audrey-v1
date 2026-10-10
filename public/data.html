@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FAF8F4">
+<meta name="description" content="Your data: the Arbor 10-point data charter, one-tap export, one-tap delete.">
+<title>Your Data — Arbor</title>
+<link rel="stylesheet" href="/styles.css">
+<link rel="icon" type="image/png" href="/icons/icon-192.png">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand-lockup" href="/" aria-label="Audrey home">
+      <svg class="arch-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M5 28 A11 11 0 0 1 27 28" stroke-width="2.4"/><path d="M10.5 28 A5.5 5.5 0 0 1 21.5 28" stroke-width="2.4"/><path d="M14 28 A2 2 0 0 1 18 28" stroke-width="2.4"/></svg>
+      <span class="brand-name">Audrey<sup style="font-size:11px">™</sup></span>
+    </a>
+    <nav class="header-nav" aria-label="Primary">
+      <a class="nav-link" href="/for-attorneys">For Attorneys</a>
+      <a class="nav-link" href="/about">About</a>
+      <a class="nav-link" href="/faq">FAQ</a>
+      <a class="powered-badge header-badge" href="#" title="Arbor Technologies site — coming soon" aria-label="Powered by Arbor (Arbor Technologies site coming soon)">
+        <svg class="arch-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M5 28 A11 11 0 0 1 27 28" stroke-width="2.4"/><path d="M10.5 28 A5.5 5.5 0 0 1 21.5 28" stroke-width="2.4"/><path d="M14 28 A2 2 0 0 1 18 28" stroke-width="2.4"/></svg>
+        <span class="pb-by">powered by</span><span class="pb-arbor">Arbor</span>
+      </a>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark theme">◐</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" style="padding-bottom:64px">
+    <div class="container reading">
+      <p class="eyebrow reveal">Your data</p>
+      <h1 class="reveal">You own your data.</h1>
+      <p class="body-lg reveal" style="color:var(--muted)">Export in one tap. Delete in one tap. The charter below is our promise, word for word.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container reading">
+      <div class="two-col">
+        <div class="card reveal">
+          <p class="card-label">Export</p>
+          <h3>Take it with you</h3>
+          <p style="color:var(--ink-2)">Download everything this browser holds (your Circle notes) as a readable file. For a demo request, enter your reference code.</p>
+          <p><button class="btn btn-secondary btn-block" id="exportNotesBtn" type="button">Export my notes</button></p>
+          <label class="field-label" for="exportRef">Demo request reference</label>
+          <input id="exportRef" type="text" placeholder="e.g. A1B2C3D4" autocomplete="off">
+          <p class="mt-16"><button class="btn btn-ghost btn-block" id="exportDemoBtn" type="button">Export demo request</button></p>
+          <p id="exportStatus" class="hint" role="status"></p>
+        </div>
+        <div class="card reveal">
+          <p class="card-label">Delete</p>
+          <h3>Gone means gone</h3>
+          <p style="color:var(--ink-2)">Delete your notes from this browser, or delete a demo request from our server with its reference code. Gone from the live system right away, and from backups within 30 days.</p>
+          <p><button class="btn btn-danger-ghost btn-block" id="deleteNotesBtn" type="button">Delete all my notes</button></p>
+          <label class="field-label" for="deleteRef">Demo request reference</label>
+          <input id="deleteRef" type="text" placeholder="e.g. A1B2C3D4" autocomplete="off">
+          <p class="mt-16"><button class="btn btn-danger-ghost btn-block" id="deleteDemoBtn" type="button">Delete demo request</button></p>
+          <p id="deleteStatus" class="hint" role="status"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0" id="charter">
+    <div class="container reading">
+      <p class="eyebrow reveal">Data charter</p>
+      <h2 class="reveal">“You own your data”</h2>
+      <ol class="plain">
+        <li><span class="charter-num">1.</span><strong>Your data is yours.</strong> We hold it for you, to do work for you. Take it with you any time.</li>
+        <li><span class="charter-num">2.</span><strong>Never sold.</strong> Not to advertisers, data brokers, providers, or partners. No ad trackers.</li>
+        <li><span class="charter-num">3.</span><strong>Never used to train models.</strong> Not ours, not anyone's. The list of providers is public.</li>
+        <li><span class="charter-num">4.</span><strong>Export in one tap.</strong> Everything, in a readable format (PDF + JSON/CSV).</li>
+        <li><span class="charter-num">5.</span><strong>Delete in one tap.</strong> Gone from the live system right away, and from backups within 30 days.</li>
+        <li><span class="charter-num">6.</span><strong>Encrypted.</strong> In transit and at rest. Device-only rooms we can't read at all.</li>
+        <li><span class="charter-num">7.</span><strong>Collect the minimum.</strong> Each feature asks only for what it needs. Every connector is opt-in.</li>
+        <li><span class="charter-num">8.</span><strong>Your choice of home.</strong> Our encrypted cloud by default, or on your device only.</li>
+        <li><span class="charter-num">9.</span><strong>People see only what you share.</strong> Team access is limited, logged, and visible to you.</li>
+        <li><span class="charter-num">10.</span><strong>No quiet changes.</strong> New use of your data? We ask first, in plain words. Silence never counts as yes.</li>
+      </ol>
+      <div class="honesty reveal mt-24">
+        <strong>How this holds up today.</strong>
+        No third-party pixels or trackers on this site. Counsel questions are never stored. Circle notes live only in your browser — we cannot see them. Demo requests are stored only to follow up on the demo, and you can export or delete them above with your reference code. Model-provider terms: demo counsel uses no model at all; live counsel uses the provider configured on the server, on no-training terms.
+      </div>
+      <p class="reveal"><a class="btn btn-secondary" href="/contact">Talk to a person</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h4>Arbor</h4>
+      <p class="small" style="color:#B8B0A5">Audrey is built and run by Arbor Technologies — work that gets done for you, by people and technology you can trust.</p>
+      <p><a class="powered-badge" href="#" title="Arbor Technologies site — coming soon" aria-label="Powered by Arbor (Arbor Technologies site coming soon)">
+        <svg class="arch-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M5 28 A11 11 0 0 1 27 28" stroke-width="2.4"/><path d="M10.5 28 A5.5 5.5 0 0 1 21.5 28" stroke-width="2.4"/><path d="M14 28 A2 2 0 0 1 18 28" stroke-width="2.4"/></svg>
+        <span class="pb-by">powered by</span><span class="pb-arbor">Arbor</span>
+      </a></p>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <ul>
+        <li><a href="/">Audrey</a></li>
+        <li><a href="/for-attorneys">Arbor for Law</a></li>
+        <li><a href="/about">About Audrey</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Trust</h4>
+      <ul>
+        <li><a href="/data">Your data</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/contact">Talk to a person</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#charter">Data charter</a></li>
+        <li><a href="/for-attorneys#disclosure">Attorney disclosure</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-legal">
+    <div class="container footer-line">
+      <span>Powered by Arbor · The Arbor Group · She owns her data.</span>
+      <span>© 2026 The Arbor Group.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/site.js"></script>
+<script src="/js/analytics.js"></script>
+<script>
+'use strict';
+(function () {
+  var NOTES_KEY = 'audrey_circle_notes_v1';
+  function loadNotes() {
+    try { var a = JSON.parse(localStorage.getItem(NOTES_KEY)); return Array.isArray(a) ? a : []; }
+    catch (e) { return []; }
+  }
+  function download(name, text) {
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([text], { type: 'text/plain' }));
+    a.download = name;
+    document.body.appendChild(a); a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+  }
+  var exportStatus = document.getElementById('exportStatus');
+  var deleteStatus = document.getElementById('deleteStatus');
+
+  document.getElementById('exportNotesBtn').addEventListener('click', function () {
+    var notes = loadNotes();
+    if (!notes.length) { exportStatus.textContent = 'No notes in this browser to export.'; return; }
+    var text = notes.map(function (n) {
+      return '— ' + (n.title || 'Untitled') + ' (' + new Date(n.createdAt).toLocaleString() + ')\n' + (n.body || '');
+    }).join('\n\n');
+    download('audrey-notes-export.txt', 'Audrey — Circle notes (exported ' + new Date().toLocaleString() + ')\n\n' + text + '\n');
+    exportStatus.textContent = 'Exported ' + notes.length + ' note' + (notes.length === 1 ? '' : 's') + '.';
+    if (window.trackEvent) window.trackEvent('export_notes');
+  });
+
+  document.getElementById('deleteNotesBtn').addEventListener('click', function () {
+    if (!loadNotes().length) { deleteStatus.textContent = 'No notes in this browser to delete.'; return; }
+    if (confirm('Delete all Circle notes from this browser? This cannot be undone.')) {
+      localStorage.removeItem(NOTES_KEY);
+      deleteStatus.textContent = 'All notes deleted from this browser.';
+      if (window.trackEvent) window.trackEvent('delete_notes');
+    }
+  });
+
+  document.getElementById('exportDemoBtn').addEventListener('click', async function () {
+    var ref = document.getElementById('exportRef').value.trim().toUpperCase();
+    exportStatus.className = 'hint';
+    if (!ref) { exportStatus.textContent = 'Enter your reference code first.'; return; }
+    exportStatus.textContent = 'Looking it up…';
+    try {
+      var res = await fetch('/api/demo-request/' + encodeURIComponent(ref));
+      var data = await res.json();
+      if (data.ok) {
+        download('demo-request-' + ref + '.json', JSON.stringify(data.request, null, 2));
+        exportStatus.textContent = 'Demo request exported.';
+      } else { exportStatus.textContent = data.error || 'Not found.'; }
+    } catch (e) { exportStatus.textContent = 'Could not reach the server — try again.'; }
+  });
+
+  document.getElementById('deleteDemoBtn').addEventListener('click', async function () {
+    var ref = document.getElementById('deleteRef').value.trim().toUpperCase();
+    deleteStatus.className = 'hint';
+    if (!ref) { deleteStatus.textContent = 'Enter your reference code first.'; return; }
+    if (!confirm('Delete demo request ' + ref + ' from our server? This cannot be undone.')) return;
+    deleteStatus.textContent = 'Deleting…';
+    try {
+      var res = await fetch('/api/demo-request/' + encodeURIComponent(ref), { method: 'DELETE' });
+      var data = await res.json();
+      deleteStatus.textContent = data.ok ? 'Demo request deleted from our server.' : (data.error || 'Not found.');
+    } catch (e) { deleteStatus.textContent = 'Could not reach the server — try again.'; }
+  });
+})();
+</script>
+</body>
+</html>

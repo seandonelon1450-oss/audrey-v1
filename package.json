@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "description": "Audrey + Arbor for Law \u2014 Arbor design system web app (audrey-v1 repo).",
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED",
+  "main": "server.js",
+  "name": "audrey-v1",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "version": "1.0.0"
+}

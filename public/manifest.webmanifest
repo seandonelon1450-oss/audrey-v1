@@ -1,0 +1,1 @@
+{"background_color": "#FAF8F4", "description": "Audrey \u2014 your week, handled.", "display": "standalone", "icons": [{"sizes": "192x192", "src": "/icons/icon-192.png", "type": "image/png"}, {"purpose": "any maskable", "sizes": "512x512", "src": "/icons/icon-512.png", "type": "image/png"}], "name": "Audrey", "short_name": "Audrey", "start_url": "/", "theme_color": "#FAF8F4"}
