@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Environment / secrets
+.env
+.env.*
+hidden/
+*.pem
+*.key
+
+# Runtime data (written by the app; not part of source)
+data/*.jsonl
+!data/.gitkeep
+
+# Logs & OS noise
+*.log
+.DS_Store
